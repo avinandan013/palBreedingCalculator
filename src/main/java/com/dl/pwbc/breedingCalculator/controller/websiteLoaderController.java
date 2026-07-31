@@ -1,4 +1,4 @@
-package com.dl.pwbc.controller;
+package com.dl.pwbc.breedingCalculator.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
