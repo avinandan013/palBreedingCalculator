@@ -9,8 +9,9 @@ public class WhereIsMyChild {
     @Autowired
     palFinderRepo pfRepo;
     public Pal findMyChild(Pal parentA, Pal parentB){
-        int avg = (parentA.getPalId()+parentB.getPalId()) / 2;
-        Pal child = pfRepo.findById(avg);
-        return child;
+//        String avg = (parentA.getPalId()+parentB.getPalId()) / 2;
+//        Pal child = pfRepo.findById(avg);
+//        return child;
+        return parentA;   //This one is written just to omit the error
     }
 }
