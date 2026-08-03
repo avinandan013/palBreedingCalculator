@@ -29,11 +29,22 @@ public class Pal {
 
     private String palElement;
 
+    private Integer palBreedingRank;
+
     @JsonProperty("types")
     public void unpackElementFromNestedObject(List<Map<String, String>> types) {
         if (types != null && !types.isEmpty()) {
             // Grabs the "name" value from the first item in the array
             this.palElement = types.get(0).get("name");
+        }
+    }
+
+    @JsonProperty("breeding")
+    public void unpackBreedingRankFromObject(Map<String, Object> breeding) {
+        if (breeding != null && breeding.containsKey("rank")) {
+            // Convert the value to an Integer safely
+            Number rank = (Number) breeding.get("rank");
+            this.palBreedingRank = rank.intValue();
         }
     }
 
